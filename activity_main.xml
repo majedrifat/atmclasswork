@@ -4,32 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   android:orientation="vertical"
-    tools:context="com.example.administrator.test.MainActivity">
+    android:orientation="vertical"
+    android:layout_weight="1"
+    tools:context="com.example.administrator.fregment.MainActivity">
 
-   <EditText
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:layout_marginTop="12dp"
-       android:id="@+id/edt1"
-       />
-    <Button
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="widrow"
-        android:id="@+id/wd"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="deposit"
-        android:id="@+id/dep"/>
-    <TextView
-        android:layout_marginTop="50dp"
+
+    <LinearLayout
+        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:id="@+id/tv1"/>
+        android:layout_weight=".2"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt1"
+            android:text="A"
+            android:onClick="action"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt2"
+            android:text="B"
+            android:onClick="action"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_weight=".8"
+        android:layout_height="wrap_content">
+        <fragment
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fr1"
+
+            android:name="com.example.administrator.fregment.BlankFragment2"
+            tools:layout="@layout/fragment_blank_fragment2" />
+
+
+
+
+
+    </LinearLayout>
 
 </LinearLayout>
